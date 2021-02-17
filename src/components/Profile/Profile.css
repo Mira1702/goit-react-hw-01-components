@@ -1,0 +1,31 @@
+.profile {
+    padding: 10px;
+    background-color: gainsboro;
+    width: 200px;
+    font-size: 13px;    
+}
+.description {
+    text-align: center;    
+}
+.avatar {
+    width: 100px;
+}
+.name {
+    margin:0;
+}
+.tag {
+    margin:0;
+}
+.location {
+    margin:0;
+}
+.stats {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-around;
+}
+.stats-prof {
+    display: grid;
+    text-align: center;
+}
