@@ -1,8 +1,9 @@
-.profile {
-    padding: 10px;
+.profile {    
     background-color: gainsboro;
-    width: 200px;
-    font-size: 13px;    
+    width: 250px;
+    font-size: 13px;   
+    margin-bottom: 15px; 
+    border: 1px solid black;    
 }
 .description {
     text-align: center;    
@@ -22,10 +23,14 @@
 .stats {
     display: flex;
     padding: 0;
+    margin: 0;
     list-style-type: none;
-    justify-content: space-around;
+    justify-content: space-around;    
+    
 }
 .statsprof {
     display: grid;
     text-align: center;
+    width: 83.33px;
+    border: 1px solid black;
 }
