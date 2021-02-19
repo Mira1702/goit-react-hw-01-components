@@ -1,28 +1,33 @@
 import React from 'react';
+import s from './TransactionHistory.module.scss';
 
-const TransactionHistory = () => {
+const TransactionHistoryItem = ({ id, type, amount, currency }) => {
     return (
-        <table class="transaction-history">
-          <thead>
+        <tr key={id}>
+              <td>{type}</td>
+              <td>{amount}</td>
+              <td>{currency}</td>
+            </tr> 
+    )
+}
+
+const TransactionHistoryItemList = ({ items }) => {
+
+  return <tbody className={s.table}>{items.map(TransactionHistoryItem)}</tbody>
+  
+}
+const TransactionHistory = ({ items }) => {
+    return (
+      <table key={items.id} className={s.transactionHistory}>
+          <thead className={s.headerList}>
             <tr>
-              <th>Type</th>
-              <th>Amount</th>
-              <th>Currency</th>
+              <th className={s.header}>Type</th>
+              <th className={s.header}>Amount</th>
+              <th className={s.header}>Currency</th>
             </tr>
           </thead>
 
-          <tbody>
-            <tr>
-              <td>Invoice</td>
-              <td>125</td>
-              <td>USD</td>
-            </tr>
-            <tr>
-              <td>Withdrawal</td>
-              <td>85</td>
-              <td>USD</td>
-            </tr>
-          </tbody>
+        <TransactionHistoryItemList items={items}/>
         </table>
     )
 }

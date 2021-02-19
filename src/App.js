@@ -10,9 +10,11 @@ import statisticalData from './DataJSON/statisticalData.json';
 import friends from './DataJSON/friends.json';
 import transactions from './DataJSON/transactions.json';
 
+import s from './App.module.scss';
+
 const App = () => {
     return (
-        <div>
+        <div className={s.app}>
             <Profile
               name={user.name}
               tag={user.tag}
